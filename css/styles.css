@@ -49,21 +49,21 @@
 }
 
 :root {
-  --cream: #f3eee4;
-  --cream-deep: #e7dcc8;
-  --paper: #fbf7f0;
-  --ink: #241910;
-  --ink-soft: #3f3228;
-  --line: rgba(58, 39, 24, 0.16);
-  --kraft: #8d5b34;
-  --kraft-deep: #5c3b22;
-  --bark: #2c2118;
-  --forest: #1c4534;
-  --forest-deep: #10281e;
-  --leaf: #2f6b4f;
-  --moss: #d7eadc;
-  --gold: #c4a074;
-  --shadow: 0 18px 50px rgba(36, 25, 16, 0.12);
+  --cream: #f4f8fc;
+  --cream-deep: #d4edfc;
+  --paper: #ffffff;
+  --ink: #041e42;
+  --ink-soft: #041e42;
+  --line: rgba(0, 32, 91, 0.16);
+  --kraft: #003da5;
+  --kraft-deep: #003da5;
+  --bark: #00205b;
+  --forest: #00205b;
+  --forest-deep: #041e42;
+  --leaf: #003da5;
+  --moss: #e5f4ff;
+  --gold: #5fcdf5;
+  --shadow: 0 18px 50px rgba(4, 30, 66, 0.12);
   --serif: "Fraunces", "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
   --sans: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
   --radius: 24px;
@@ -86,8 +86,8 @@ body {
   margin: 0;
   color: var(--ink-soft);
   background:
-    radial-gradient(900px 420px at 0% -10%, rgba(46, 107, 79, 0.08), transparent 55%),
-    radial-gradient(700px 380px at 100% 0%, rgba(141, 91, 52, 0.1), transparent 50%),
+    radial-gradient(900px 420px at 0% -10%, rgba(0, 61, 165, 0.08), transparent 55%),
+    radial-gradient(700px 380px at 100% 0%, rgba(0, 32, 91, 0.08), transparent 50%),
     var(--cream);
   font-family: var(--sans);
   font-size: 1.0625rem;
@@ -96,9 +96,9 @@ body {
 
 img, svg, video { max-width: 100%; }
 
-a { color: var(--forest); text-underline-offset: 0.16em; }
+a { color: #003da5; text-underline-offset: 0.16em; }
 
-a:hover { color: var(--kraft-deep); }
+a:hover { color: #00205b; }
 
 button { font-family: inherit; cursor: pointer; }
 
@@ -117,8 +117,15 @@ h2 { font-size: clamp(1.8rem, 3vw, 2.45rem); margin: 0 0 0.75rem; }
 h3 { font-size: 1.28rem; margin: 0 0 0.4rem; }
 
 :focus-visible {
-  outline: 3px solid var(--kraft);
+  outline: 3px solid #003da5;
   outline-offset: 3px;
+}
+
+.site-footer a:focus-visible,
+.fact-band a:focus-visible,
+.callout a:focus-visible,
+.chat-panel-bar :focus-visible {
+  outline-color: #5fcdf5;
 }
 
 .skip {
@@ -162,8 +169,8 @@ h3 { font-size: 1.28rem; margin: 0 0 0.4rem; }
 }
 
 .banner {
-  background: var(--forest-deep);
-  color: #f6f0e6;
+  background: var(--forest);
+  color: #e5f4ff;
   text-align: center;
   padding: 0.55rem 1rem;
   font-size: 0.92rem;
@@ -177,7 +184,7 @@ h3 { font-size: 1.28rem; margin: 0 0 0.4rem; }
   position: sticky;
   top: 0;
   z-index: 30;
-  background: rgba(243, 238, 228, 0.92);
+  background: rgba(244, 248, 252, 0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
@@ -284,7 +291,7 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
   border-radius: 999px;
   border: 2px solid var(--forest);
   background: var(--forest);
-  color: #f7f3ea;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 650;
   line-height: 1.2;
@@ -300,7 +307,7 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
   color: var(--forest-deep);
 }
 
-.btn-secondary:hover { background: var(--forest); color: #f7f3ea; }
+.btn-secondary:hover { background: var(--forest); color: #ffffff; }
 
 .btn svg { width: 1.1rem; height: 1.1rem; }
 
@@ -310,10 +317,10 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
   position: relative;
   border-radius: 28px;
   overflow: hidden;
-  background: #cbb89a;
+  background: #d4edfc;
   box-shadow: var(--shadow);
   aspect-ratio: 16 / 9;
-  border: 1px solid rgba(58, 39, 24, 0.18);
+  border: 1px solid rgba(0, 32, 91, 0.18);
 }
 
 .hero-video {
@@ -321,7 +328,7 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
   height: 100%;
   object-fit: cover;
   display: block;
-  background: #cbb89a;
+  background: #d4edfc;
 }
 
 .video-controls {
@@ -335,7 +342,7 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
 
 .video-controls button {
   border: 0;
-  background: rgba(251, 247, 240, 0.94);
+  background: rgba(255, 255, 255, 0.94);
   color: var(--bark);
   border-radius: 999px;
   min-height: 2.5rem;
@@ -352,14 +359,14 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
 }
 
 .fact-band {
-  background: var(--forest-deep);
-  color: #f6f0e6;
+  background: var(--forest);
+  color: #e5f4ff;
   padding: 2.4rem 0;
 }
 
-.fact-band h2 { color: #f6f0e6; }
+.fact-band h2 { color: #e5f4ff; }
 
-.fact-intro { max-width: 42rem; color: rgba(246, 240, 230, 0.88); }
+.fact-intro { max-width: 42rem; color: #e5f4ff; }
 
 .fact-grid {
   display: grid;
@@ -369,7 +376,7 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
 
 .fact {
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(246, 240, 230, 0.16);
+  border: 1px solid rgba(229, 244, 255, 0.28);
   border-radius: 20px;
   padding: 1.15rem 1.2rem 1.2rem;
 }
@@ -380,7 +387,7 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
   letter-spacing: 0.08em;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #e6d3b4;
+  color: #5fcdf5;
 }
 
 .fact-value {
@@ -391,9 +398,9 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
   color: #fff;
 }
 
-.fact p:last-child { margin: 0; color: rgba(246, 240, 230, 0.9); }
+.fact p:last-child { margin: 0; color: #e5f4ff; }
 
-.fact-band a { color: #f0e2c8; }
+.fact-band a { color: #d4edfc; }
 
 .section { padding: 4.2rem 0; }
 .section-follow { padding-top: 0; }
@@ -437,7 +444,7 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
 .picker button[aria-checked="true"] {
   background: var(--forest);
   border-color: var(--forest);
-  color: #f7f3ea;
+  color: #ffffff;
 }
 
 .journey-layout {
@@ -446,24 +453,24 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
 }
 
 .scene {
-  background: #f6efe4;
+  background: #e5f4ff;
   border-radius: 20px;
   overflow: hidden;
-  --box: #d7b48a;
-  --box-dark: #8d5a34;
-  --box-side: #c4925e;
+  --box: #5fcdf5;
+  --box-dark: #003da5;
+  --box-side: #0070d4;
 }
 
 .scene[data-package="carton"] {
-  --box: #f0e2cc;
-  --box-dark: #b08958;
-  --box-side: #e4cfae;
+  --box: #d4edfc;
+  --box-dark: #0070d4;
+  --box-side: #5fcdf5;
 }
 
 .scene[data-package="tray"] {
-  --box: #d9c7a6;
-  --box-dark: #5f7f62;
-  --box-side: #cbb892;
+  --box: #0070d4;
+  --box-dark: #00205b;
+  --box-side: #003da5;
 }
 
 .scene-svg { display: block; width: 100%; height: auto; }
@@ -483,7 +490,7 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
 
 .fiber-draw {
   fill: none;
-  stroke: #6b4428;
+  stroke: #003da5;
   stroke-width: 5;
   stroke-linecap: round;
   stroke-dasharray: 800;
@@ -535,7 +542,7 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
 .loop-track {
   height: 5px;
   border-radius: 999px;
-  background: rgba(58, 39, 24, 0.12);
+  background: rgba(0, 32, 91, 0.12);
   overflow: hidden;
   margin-bottom: 0.9rem;
 }
@@ -586,11 +593,11 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
 .steps button[aria-current="step"] {
   background: var(--forest);
   border-color: var(--forest);
-  color: #f7f3ea;
+  color: #ffffff;
 }
 
 .steps button[aria-current="step"] .step-index {
-  background: #f7f3ea;
+  background: #ffffff;
   color: var(--forest);
 }
 
@@ -622,7 +629,7 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
 
 .stage-nav .btn {
   background: var(--forest);
-  color: #f7f3ea;
+  color: #ffffff;
   border: 2px solid var(--forest);
 }
 
@@ -676,7 +683,7 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
 
 .site-footer {
   background: var(--bark);
-  color: #f6f0e6;
+  color: #e5f4ff;
   padding: 2.2rem 0 6.5rem;
 }
 
@@ -695,7 +702,7 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
 .disclaimer {
   margin: 0;
   max-width: 46rem;
-  color: #f6f0e6;
+  color: #e5f4ff;
 }
 
 .disclaimer strong { color: #fff; }
@@ -708,11 +715,16 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
   gap: 0.45rem;
 }
 
-.footer-links a { color: #f0e2c8; }
+.footer-links a { color: #d4edfc; }
+
+.footer-links a:hover,
+.fact-band a:hover,
+.callout a:hover,
+.chat-window-link:hover { color: #ffffff; }
 
 .noscript {
-  background: #fff4d8;
-  border: 1px solid #e0c48a;
+  background: #e5f4ff;
+  border: 1px solid #003da5;
   border-radius: 16px;
   padding: 0.9rem 1rem;
   color: var(--bark);
@@ -762,7 +774,7 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
   display: grid;
   place-items: center;
   background: var(--forest);
-  color: #f7f3ea;
+  color: #ffffff;
   font-weight: 700;
 }
 
@@ -784,8 +796,8 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
 .callout {
   display: grid;
   gap: 0.4rem 1.5rem;
-  background: var(--forest-deep);
-  color: #f6f0e6;
+  background: var(--forest);
+  color: #e5f4ff;
   border-radius: 24px;
   padding: 1.3rem 1.3rem 1.4rem;
   margin: 1rem 0 1.2rem;
@@ -800,8 +812,8 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
   letter-spacing: -0.04em;
 }
 
-.callout p { margin: 0; color: rgba(246, 240, 230, 0.92); }
-.callout a { color: #f0e2c8; }
+.callout p { margin: 0; color: #e5f4ff; }
+.callout a { color: #d4edfc; }
 
 .caveat-list, .guard-list, .source-list {
   margin: 0.4rem 0 1rem;
@@ -843,8 +855,8 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
   border: 0;
   border-radius: 999px;
   background: var(--forest);
-  color: #f7f3ea;
-  box-shadow: 0 12px 30px rgba(16, 40, 30, 0.35);
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 32, 91, 0.35);
   font-weight: 700;
   cursor: pointer;
 }
@@ -867,7 +879,7 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid var(--line);
-  box-shadow: 0 24px 70px rgba(36, 25, 16, 0.28);
+  box-shadow: 0 24px 70px rgba(4, 30, 66, 0.28);
 }
 
 .chat-panel-bar {
@@ -876,7 +888,7 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
   gap: 0.6rem;
   padding: 0.65rem 0.7rem 0.65rem 0.95rem;
   background: var(--forest);
-  color: #f7f3ea;
+  color: #ffffff;
 }
 
 .chat-title {
@@ -890,7 +902,7 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
 }
 
 .chat-window-link {
-  color: #f7f3ea;
+  color: #ffffff;
   font-size: 0.82rem;
   font-weight: 650;
   white-space: nowrap;
@@ -912,7 +924,7 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
 
 .chat-note {
   padding: 0.45rem 0.9rem;
-  background: #efe4d2;
+  background: #e5f4ff;
   color: var(--bark);
   font-size: 0.82rem;
 }
@@ -920,7 +932,7 @@ main :is(section, [id]) { scroll-margin-top: 5.5rem; }
 .chat-suggest {
   padding: 0.65rem 0.9rem 0.75rem;
   border-bottom: 1px solid var(--line);
-  background: #f7f3ea;
+  background: #f4f8fc;
 }
 
 .chat-suggest-label {
